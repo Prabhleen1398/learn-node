@@ -1,0 +1,11 @@
+{
+  "name": "learn-node",
+  "version": "1.0.0",
+  "description": "Node.js has several libraries (i.e. packages) we can use for development. In order to utilize installed libraries we use import or require a module in our code. For example:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
