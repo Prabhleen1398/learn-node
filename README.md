@@ -27,6 +27,7 @@ Edit helloserver.js by adding the shebang at the top of the script and run it as
     `$ nodemon /path/to/helloserver.js`
 
 **Useful Node JS Objects**
+done
 
 The process module is useful for reading arguments passed to a script from the command line. Arguments are stored in an array called process.argv. process.argv[0] and process.argv[1] is the path to node.js and the script respectively.
 Answer the following questions based on "basics/foo.js":
@@ -38,6 +39,7 @@ Answer the following questions based on "basics/foo.js":
 2. Modify "basics/foo.js" such that all arguments except the Node path and the script path are logged.
 
 # Block and Non Blocking Operations
+done
 
 The NodeJS standard library has several operations that are called blocking operations. A blocking operation does allow execution to proceed unless the operation has finished. Examples of blocking operations are I/O operations, database connection operations, etc. Since Node JS has an event loop that runs on a single thread, running blocking operations that take time to finish degrades throughput of the server. Therefore, the standard library also has non-blocking versions of these operations. Based on the problem at hand, one may choose to use a blocking or non-blocking operation. 
 
@@ -49,18 +51,26 @@ One must be careful when writing concurrent scripts in Node.js. If actions perfo
 For example, consider the code in "operations/syncdelete.js".
 
 **For you to do**:
+done
 
 1. Identify and fix the runtime error in "operations/syncdelete.js".
 
 # Event Loop
+done
 
 When *setTimeout(callback, ms)* invoked, Node puts a *callback* in the timer phase's queue. The Node runtime executes it after a threshold time as specified in the *ms* argument.
 
 **For you to do**:
 
-1. In "eventloop/timer.js", what will be the order of execution?
+1. In "eventloop/timer.js", what will be the order of execution? ->
+foo
+baz
+foo
+baz
+2 : bar
+1 : bar
 
-2. How many callbacks will the timers phase queue have after the script is run? 
+3. How many callbacks will the timers phase queue have after the script is run? -> 2
 
 All I/O operations (e.g., read a file) run in the poll phase. The poll phase performs an I/O operation and puts all callbacks associated with the I/O operation in its queue. When the I/O operation completes, it executes the callbacks in the queue. 
 
